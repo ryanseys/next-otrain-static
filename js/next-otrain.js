@@ -2,12 +2,12 @@ var data;
 
 //get times
 
-$.get(
-    "times.json",
-    function(json) {
-       data = JSON.parse(json);
-    }
-);
+$(function(){
+   $.getJSON("/times.json", function (stuff) {
+      data = stuff;
+      startTime();
+   });
+});
 
 var station_names = ["BAYVIEW", "CARLING", "CARLETON", "CONFEDERATION", "GREENBORO"];
 var station_id; //station id
@@ -50,6 +50,9 @@ function setLocation(station_index) {
   if(data) {
     station_id = direction == 1 ? data[day][direction][station_location] : data[day][direction][4 - station_location];
     curr_station_name = station_names[station_location];
+  }
+  else {
+    console.log('No data');
   }
   getNextTime();
 }
@@ -165,5 +168,3 @@ window.addEventListener("load", function() {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
   })();
 });
-
-startTime();
