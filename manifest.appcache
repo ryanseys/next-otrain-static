@@ -1,0 +1,30 @@
+CACHE MANIFEST
+# update rev to reset cache
+# rev: 141
+
+# save these in cache
+CACHE:
+/
+/font/fontawesome-webfont.eot
+/font/fontawesome-webfont.svg
+/font/fontawesome-webfont.ttf
+/font/fontawesome-webfont.woff
+/FontAwesome.ttf
+/img/favicon.png
+/img/iphone-icon.png
+/js/bootstrap.min.js
+/js/jquery-1.7.2.min.js
+/js/next-otrain.min.js
+/css/bootstrap-responsive.min.css
+/css/bootstrap.min.css
+/css/font-awesome-ie7.css
+/css/font-awesome.css
+/css/style.css
+/times.json
+
+FALLBACK:
+/ /
+
+# everything else requires network
+NETWORK:
+*

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html manifest="/manifest.appcache">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Track when Ottawa's Next OTrain is scheduled to arrive.">
+    <meta name="keywords" content="next,otrain,o-train,train,oc,transpo,oc-transpo,public,transporation,time,schedule,ottawa,ontario,canada,countdown,timer">
+    <meta property="og:image" content="http://nextotrain.com/img/iphone-icon.png">
+    <title>Next OTrain</title>
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Thanks to Font Awesome - http://fortawesome.github.com/Font-Awesome-->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/img/favicon.png" type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/iphone-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--Standart viewport for Android 2.3 and legacy iPhones-->
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <!--width=device-width causes web app to be letterboxed on iPhone 5-->
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+</head>
+
+<body><i id="hud" style="font-size:130px; text-align:center;" class="arrows icon-arrow-up icon-large"></i>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <div id="stationlist" class="pull-center">
+        <h1 id="title" style="float:left;"><a id="titlelink" href="/">Next <i class="icon-time"></i>Train</a>
+        </h1>
+        <div style="clear:both;" class="spacer"></div>
+        <ul id="stations" class="nav nav-tabs nav-stacked">
+            <li id="locationli0"><a id="location0" station="0" data-toggle="button" onclick="setLocation(0)" style="font-weight:bold; font-size: 140%; cursor: pointer;" class="tab-pane pull-center">Bayview</a><i style="font-size:130%; top:1px; position:relative;" class="arrows icon-arrow-up"></i>
+            </li>
+            <li id="locationli1"><a id="location1" station="1" data-toggle="button" onclick="setLocation(1)" style="font-weight:bold; font-size: 140%; cursor: pointer;" class="tab-pane pull-center">Carling</a><i style="font-size:130%; top:1px; position:relative;" class="arrows icon-arrow-up"></i>
+            </li>
+            <li id="locationli2"><a id="location2" station="2" data-toggle="button" onclick="setLocation(2)" style="font-weight:bold; font-size: 140%; cursor: pointer;" class="tab-pane pull-center">Carleton</a><i style="font-size:130%; top:1px; position:relative;" class="arrows icon-arrow-up"></i>
+            </li>
+            <li id="locationli3"><a id="location3" station="3" data-toggle="button" onclick="setLocation(3)" style="font-weight:bold; font-size: 140%; cursor: pointer;" class="tab-pane pull-center">Confederation</a><i style="font-size:130%; top:1px; position:relative;" class="arrows icon-arrow-up"></i>
+            </li>
+            <li id="locationli4"><a id="location4" station="4" data-toggle="button" onclick="setLocation(4)" style="font-weight:bold; font-size: 140%; cursor: pointer;" class="tab-pane pull-center">Greenboro</a>
+            </li>
+        </ul><a id="switch_dir" data-toggle="dropdown" onclick="toggleDirection()" class="pull-center btn btn-large btn-primary dropdown-toggle icon-refresh"> Switch direction</a>
+        <h2 id="next" style="padding-top:4px"></h2>
+    </div>
+    <hr/>
+    <div class="pull-center">
+        <span>Created by&nbsp;</span><a href="https://ryanseys.com" target="_blank"><b>Ryan Seys</b></a>
+    </div>
+    <div style="margin-top:4px" class="pull-center"><a title="Buy me a coffee" target="_blank" href="https://www.paypal.com/webscr?cmd=_donations&amp;business=ryan@ryanseys.com&amp;item_name=Donate&amp;currency_code=CAD" class="btn btn-success btn-mini icon-heart"> Donate</a><a style="margin-left:4px" href="javascript:UserVoice.showPopupWidget();" title="Open feedback &amp; support dialog (powered by UserVoice)" class="btn btn-info btn-mini icon-bullhorn"> feedback & support</a>
+        <p style="position:relative; top:5px; bottom:0; clear:both; font-size:7pt;color:#666666;opacity:0.7;">Disclaimer: Next OTrain is in no way affiliated with <a style="color:#666666;" target="_blank" href="http://www.octranspo1.com">OC Transpo</a>.</p>
+    </div>
+</body>
+<script src="js/next-otrain.js"></script>
+
+</html>
